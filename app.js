@@ -10,7 +10,7 @@ var users = require('./routes/users');
 
 var app = express();
 
-var client_path = '../client';
+var client_path = '../crna-client';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -23,7 +23,7 @@ app.use(cookieParser());
 /**
  * Development Settings
  */
-if (app.get('env') === 'development') {
+if (app.get('env') === 'development' || app.get('env') === 'test') {
   // This will change in production since we'll be using the dist folder
   app.use(express.static(path.join(__dirname, client_path)));
   // This covers serving up the index page
