@@ -18,7 +18,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-
 /**
  * Development Settings
  */
@@ -40,7 +39,7 @@ if (app.get('env') === 'development' || app.get('env') === 'test') {
 }
 
 /**
- *  * Production Settings
+ * Production Settings
  */
 if (app.get('env') === 'production') {
   // changes it to use the optimized version for production
